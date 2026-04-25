@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aniversário</title>
+</head>
+<body>
+    <h1>ano bissexto✨</h1>
+    <h2>esse ano é bissexto ou não?</h2>
+    <br>
+    <label for="inputA">Ano:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <input type="button" value="verificar" onclick="funcaov()">
+    <br>
+    <br>
+    <span id="resp">0</span>
+    <script>
+       function funcaov(){
+    let a= parseFloat(document.getElementById("inputA").value);
+    let resposta= "";
+    if(a % 4===0){
+        resposta="ano bissexto"
+    }else{
+        resposta="não é bissexto"
+    }
+    document.getElementById("resp").innerHTML= resposta;
+}
+    </script>
+</body>
+</html>

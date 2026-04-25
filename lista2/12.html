@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputA">Digite um número</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">Número ao quadrado=</label>
+    <span id="resp">0</span>
+    <br>
+    <br>
+    <label for="resp1">Número ao cubo=</label>
+    <span id="resp1">0</span>
+    <br>
+    <br>
+    <label for="resp2">raíz quadrada do número=</label>
+    <span id="resp2">0</span>
+    <br>
+    <br>
+    <label for="resp3">raíz cúbica do número=</label>
+    <span id="resp3">0</span>
+    <script>
+        function funcaocalcular(){
+            let x= parseFloat(document.getElementById("inputA").value);
+            let q= x**2;
+            let c=x**3;
+            let rq=Math.sqrt(x);
+            let rc=Math.cbrt(x);
+            if(x===0){
+            alert ("O número não pode ser zero!");
+            }
+        
+            document.getElementById("resp").innerHTML=q;
+            document.getElementById("resp1").innerHTML=c;
+            document.getElementById("resp2").innerHTML=rq;
+            document.getElementById("resp3").innerHTML=rc;
+        }
+    </script>
+</body>
+</html>
