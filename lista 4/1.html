@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputA">Valor a:</label>
+    <input type="number" id="inputA">
+    <br>
+    <label for="inputB">Valor b:</label>
+    <input type="number" id="inputB">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let b= parseFloat(document.getElementById("inputB").value);
+    let aux= a;
+     a= b;
+     b= aux;
+   document.getElementById("resp").innerHTML =
+        "a = " + a + "<br>b = " + b;
+    }
+    </script>
+</body>
+</html>

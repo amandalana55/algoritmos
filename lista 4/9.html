@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Contador</h2>
+    <input type="button" value="clique" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp"></label>
+    <p id="resp">0</p>
+    <script>
+         let resposta= 0;
+    function funcaocalcular(){
+   resposta = resposta+1
+   document.getElementById("resp").innerHTML = resposta;
+    }
+    </script>
+</body>
+</html>

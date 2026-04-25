@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Troca de valores</h1>
+    <label for="inputA">A:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <label for="inputB">B:</label>
+    <input type="number" id="inputB">
+    <br>
+    <br>
+    <label for="inputC">C:</label>
+    <input type="number" id="inputC">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp"></label>
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let b=  parseFloat(document.getElementById("inputB").value);
+    let c=  parseFloat(document.getElementById("inputC").value);
+    [a,b,c]=[b,c,a]
+   document.getElementById("resp").innerHTML =  "a = " + a + "<br>" +
+  "b = " + b + "<br>" +
+  "c = " + c;
+    }
+    </script>
+</body>
+</html>

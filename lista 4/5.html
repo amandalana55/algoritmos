@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular área do retângulo</h1>
+    <label for="inputA">Largura:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <label for="inputB">Comprimento:</label>
+    <input type="number" id="inputB">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">Área:</label>
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let l = parseFloat(document.getElementById("inputA").value);
+    let c=  parseFloat(document.getElementById("inputB").value);
+    let a= l*c;
+   document.getElementById("resp").innerHTML = a + "m²";
+    }
+    </script>
+</body>
+</html>

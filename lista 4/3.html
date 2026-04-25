@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Transformar graus celsius para fahrenheit</h1>
+    <label for="inputA">graus celsius:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">Fahrenheit:</label>
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let g = parseFloat(document.getElementById("inputA").value);
+    let f= (g / 5) * 9;
+    let f1= f + 32;
+   document.getElementById("resp").innerHTML = f1;
+    }
+    </script>
+</body>
+</html>

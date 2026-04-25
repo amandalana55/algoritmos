@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular idade para dias</h1>
+    <label for="inputA">Idade em anos:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <label for="inputB">meses:</label>
+    <input type="number" id="inputB">
+    <br>
+    <br>
+    <label for="inputC">dias:</label>
+    <input type="number" id="inputC">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">Idade em dias:</label>
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let m=  parseFloat(document.getElementById("inputB").value);
+    let d=  parseFloat(document.getElementById("inputC").value);
+    let meses= a * 12;
+    let dias= meses * 30;
+    let dias2= m * 30;
+    let total= dias+ dias2+ d;
+   document.getElementById("resp").innerHTML = total+ " dias";
+    }
+    </script>
+</body>
+</html>
