@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xerox</title>
+</head>
+<body>
+    <h1>xerox</h1>
+    <h2>valor unitário 0,25, acima de 100 cópias 0,20</h2>
+    <label for="inputA">Imprimir xerox:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">total a pagar:</label> 
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let result= "";
+    if (a<=100){
+        result= a * 0.25;
+    }else{
+        result= a * 0.20;
+    }
+   document.getElementById("resp").innerHTML=result;
+    }
+    </script>
+</body>
+</html>

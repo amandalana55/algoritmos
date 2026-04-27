@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1>digite três números e descubra qual deles é maior</h1>
+    <label for="inputA">Digite um valor:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <label for="inputB">Digite um valor:</label>
+    <input type="number" id="inputB">
+    <br>
+    <br>
+    <label for="inputC">Digite um valor:</label>
+    <input type="number" id="inputC">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">resposta:</label> 
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let b = parseFloat(document.getElementById("inputB").value);
+    let c = parseFloat(document.getElementById("inputC").value);
+    let result="";
+    if (a>=b && a>=c){
+        result= a;
+    }else if(b>=a && b>=c){
+        result= b;
+    }else{
+        result=c;
+    }
+   document.getElementById("resp").innerHTML=result;
+    }
+    </script>
+</body>
+</html>

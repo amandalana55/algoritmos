@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <h1>dobro,triplo e nulo</h1>
+    <label for="inputA">Digite um valor qualquer:</label>
+    <input type="number" id="inputA">
+    <br>
+    <br>
+    <input type="button" value="calcular" onclick="funcaocalcular()">
+    <br>
+    <br>
+    <label for="resp">resposta:</label> 
+    <p id="resp"></p>
+    <script>
+    function funcaocalcular(){
+    let a = parseFloat(document.getElementById("inputA").value);
+    let result= "";
+    if (a===0){
+        result= "número nulo";
+    }else if (a<=0){
+        result= 2 * a;
+    }else if(a>=0){
+        result= 3 * a;
+    }
+   document.getElementById("resp").innerHTML=result;
+    }
+    </script>
+</body>
+</html>
